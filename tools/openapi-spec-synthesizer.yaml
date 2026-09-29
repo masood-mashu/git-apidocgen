@@ -1,0 +1,14 @@
+name: "openapi-spec-synthesizer"
+description: "Generates valid OpenAPI 3.1.0 schema document from list of endpoints and methods"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "openapi_spec_synthesizer.py"
+parameters:
+  type: "object"
+  properties:
+    endpoints_json:
+      type: "string"
+      description: "JSON list of endpoint paths and HTTP methods"
+  required:
+    - "endpoints_json"

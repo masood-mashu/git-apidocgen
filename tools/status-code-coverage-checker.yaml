@@ -1,0 +1,14 @@
+name: "status-code-coverage-checker"
+description: "Verifies that endpoint operations define documentation for standard client/server errors"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "status_code_coverage_checker.py"
+parameters:
+  type: "object"
+  properties:
+    responses_json:
+      type: "string"
+      description: "JSON list of documented status codes [200, 400, 401, 500]"
+  required:
+    - "responses_json"

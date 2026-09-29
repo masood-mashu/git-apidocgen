@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "generate_curl_example",
+  "description": "Generates copy-paste executable cURL command line string with headers and dummy body",
+  "type": "object",
+  "properties": {
+    "endpoint_metadata_json": {
+      "type": "string",
+      "description": "JSON with method, url, and auth_header"
+    }
+  },
+  "required": [
+    "endpoint_metadata_json"
+  ]
+}

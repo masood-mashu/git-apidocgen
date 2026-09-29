@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "check_status_code_coverage",
+  "description": "Verifies that endpoint operations define documentation for standard client/server errors",
+  "type": "object",
+  "properties": {
+    "responses_json": {
+      "type": "string",
+      "description": "JSON list of documented status codes [200, 400, 401, 500]"
+    }
+  },
+  "required": [
+    "responses_json"
+  ]
+}
