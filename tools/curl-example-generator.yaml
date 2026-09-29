@@ -1,14 +1,18 @@
-name: "curl-example-generator"
+name: curl-example-generator
+version: 1.0.0
 description: "Generates copy-paste executable cURL command line string with headers and dummy body"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "curl_example_generator.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     endpoint_metadata_json:
-      type: "string"
+      type: string
       description: "JSON with method, url, and auth_header"
   required:
-    - "endpoint_metadata_json"
+    - endpoint_metadata_json
+implementation:
+  type: script
+  path: curl_example_generator.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
